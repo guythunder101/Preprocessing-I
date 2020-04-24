@@ -56,6 +56,22 @@ table {
 html, body {
 	height: 100%;
 }
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.text-padding{
+  font-size: 25px;
+    padding: 1%;
+}
+
+@font-family: 'Gaegu', cursive;
+
+@background-color: chartreuse;
+
+
 .center{
 	display: block;
 	margin-left: auto;
@@ -69,14 +85,25 @@ display: flex;
 justify-content: flex-end;
 background-color: springgreen;
 color: black;
-
+@media(max-width: 500px)
+{
+  background-color: white;
+  height: 10%
+  }
+  
 nav {
 margin: 5px;
 padding: 25px;
+  @media(max-width: 500px){
+    .flex-column();
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
 }
 Div.intro{
-background-color: chartreuse;
+background-color: @background-color;
 
 img{
 margin: 25px;
@@ -87,6 +114,74 @@ padding: 15px;
 h1{
 	font-size: 50px;
 	text-align: center;
-	border-color: chartreuse;
+	border-color: @background-color;
+  font-family: @font-family;
 }
+  h2{
+     text-align: center;
+    .text-padding();
+  }
+}
+
+div.about{
+  text-align: center;
+ margin: 2%;
+ .flex-column();
+  
+  
+   h2{
+     font-family: @font-family;
+    .text-padding();
+  }
+  
+ p{
+    font-size: 20px;
+  }
+  
+  h2.stuff{
+    font-family: @font-family;
+    font-size: 25px;
+    padding: 1%;
+      
+  }
+  ul li{
+   margin: 0 10px;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 20px;
+    font-size: 20px;
+    display: inline-block;
+    background: green;
+  }
+  
+}
+
+div.jobs{
+  .flex-column();
+   margin: 2%;
+  text-align: center;
+  
+  h2{
+    font-size: 25px;
+    padding: 1%;
+  }
+  
+  ol li{
+    margin: 0 10px;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 20px;
+    font-size: 20px;
+   
+  }
+}
+
+footer{
+  margin: 50px;
+  padding: 50px;
+  background-color: green;
+  
+  p{
+    text-align: center;
+  }
 }
